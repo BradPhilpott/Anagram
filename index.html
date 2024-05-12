@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Anagram</title>
+</head>
+<body>
+    <div class="container">      
+        <h1 id="title">CHECK IF IT'S AN ANAGRAM</h1>
+        <form id="form">
+
+            <label for="firstw" id="w1"><b>FIRST WORD:</b></label>
+            <input type="text" id="firstw" name="firstw"placeholder="Write the first word" required>
+            <br><br/>
+            <label for="secondw"><b>SECOND WORD:</b></label>
+            <input type="text" id="secondw" name="secondw" placeholder="Write the second word" required>
+            <br><br/>
+
+            <button type="button" onclick="checkAnagram()"><b>CHECK</b></button>   
+        </form>
+        <b><p id="result"></p></b>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
