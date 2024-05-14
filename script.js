@@ -1,11 +1,16 @@
 function checkAnagram() {
-    var firstw = document.getElementById("firstw").value.toLowerCase().replace(/[^a-z]/g, '').split('').sort().join('');
-    var secondw = document.getElementById("secondw").value.toLowerCase().replace(/[^a-z]/g, '').split('').sort().join('');
+    const result = document.getElementById("result");
+
+    const firstw = sanitizeString(document.getElementById("firstw").value);
+    const secondw = sanitizeString(document.getElementById("secondw").value);
 
     if (firstw === secondw) {
-        document.getElementById("result").innerText = "THAT'S AN ANAGRAM";
+        result.innerText = "THAT'S AN ANAGRAM";
     } else {
-        document.getElementById("result").innerText = "THAT'S NOT AN ANAGRAM";
+        result.innerText = "THAT'S NOT AN ANAGRAM";
     }
+ }
 
+ function sanitizeString($string) {
+    return $string.toLowerCase().replace(/[^a-z]/g, '').split('').sort().join('');
  }
